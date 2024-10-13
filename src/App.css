@@ -40,3 +40,10 @@
 .read-the-docs {
   color: #888;
 }
+
+.filterNormally {
+  width: 50%;
+  height: 35px;
+  padding: 5px;
+  border-radius: 20px;
+}

@@ -1,0 +1,51 @@
+.student-table {
+  margin: 20px auto;
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table .Table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table .Table.THead {
+  background-color: #f7f7f7; /* Light background for headers */
+}
+
+.student-table .Table.Row {
+  border-bottom: 1px solid #ddd; /* Separator for table rows */
+}
+
+.student-table .Table.ColumnHeader {
+  padding: 12px;
+  font-weight: bold;
+  text-align: left; /* Align text to the left */
+  color: #333; /* Darker color for better readability */
+}
+
+.student-table .Table.Column {
+  padding: 12px;
+  text-align: left; /* Align text to the left */
+  color: #555; /* Slightly lighter color for the main content */
+}
+
+.student-table .Table.TFoot {
+  background-color: #f7f7f7; /* Light background for footer */
+  font-weight: bold;
+}
+
+/* Styles for StudentItem (if applicable) */
+.student-item {
+  display: flex;
+  justify-content: space-between; /* Aligns items within the row */
+}
+
+.student-item:last-child {
+  border-bottom: none; /* Remove bottom border for the last item */
+}

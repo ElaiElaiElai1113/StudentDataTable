@@ -1,19 +1,80 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import FilterStudentTable from "./components/FilterStudentTable";
 import SearchBar from "./components/SearchBar";
 import StudentTable from "./components/StudentTable";
 
+const students = [
+  {
+    id: 1,
+    lastName: "De Los Santos",
+    firstName: "Elijah",
+    course: "IS",
+    birthDate: "2002/12/19",
+    occupation: 1,
+  },
+  {
+    id: 2,
+    lastName: "Dela Rosa",
+    firstName: "Vanne",
+    course: "IS",
+    birthDate: "2003/10/18",
+    occupation: 1,
+  },
+  {
+    id: 3,
+    lastName: "Dabon",
+    firstName: "Lyla Alexys",
+    course: "CS",
+    birthDate: "2003/11/19",
+    occupation: 1,
+  },
+];
+
 function App() {
-  const [count, setCount] = useState(0);
+  const [query, setQuery] = useState("");
+  const [minDate, setMinDate] = useState("");
+  const [maxDate, setMaxDate] = useState("");
+
+  const filteredStudents = students.filter((student) => {
+    const birthDate = new Date(student.birthDate);
+    const calculatedAge = new Date().getFullYear() - birthDate.getFullYear();
+    const min = new Date(minDate);
+    const max = new Date(maxDate);
+
+    const isAgeMatch = calculatedAge.toString() === query;
+
+    return (
+      (!minDate || birthDate >= min) &&
+      (!maxDate || birthDate <= max) &&
+      (student.lastName.toLowerCase().includes(query.toLowerCase()) ||
+        student.firstName.toLowerCase().includes(query.toLowerCase()) ||
+        student.course.toLowerCase().includes(query.toLowerCase()) ||
+        student.birthDate.toLowerCase().includes(query.toLowerCase()) ||
+        isAgeMatch)
+    );
+  });
+
+  // Reset dates
+  const clearDates = () => {
+    setMinDate("");
+    setMaxDate("");
+  };
 
   return (
     <>
+      <h1>Student Management System</h1>
       <FilterStudentTable>
-        <SearchBar />
-        <StudentTable />
+        <SearchBar
+          query={query}
+          setQuery={setQuery}
+          minDate={minDate}
+          setMinDate={setMinDate}
+          maxDate={maxDate}
+          setMaxDate={setMaxDate}
+          clearDates={clearDates}
+        />
+        <StudentTable students={filteredStudents} />
       </FilterStudentTable>
     </>
   );
