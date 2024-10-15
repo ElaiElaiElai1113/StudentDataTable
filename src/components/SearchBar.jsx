@@ -25,12 +25,14 @@ const SearchBar = ({
       <div>
         <label>Min Date:</label>
         <input
+          className="dateFilter"
           type="date"
           value={minDate}
           onChange={(e) => setMinDate(e.target.value)}
         />
         <label>Max Date:</label>
         <input
+          className="dateFilter"
           type="date"
           value={maxDate}
           onChange={(e) => setMaxDate(e.target.value)}

@@ -46,4 +46,70 @@
   height: 35px;
   padding: 5px;
   border-radius: 20px;
+  margin-bottom: 10px;
+}
+
+label {
+  margin-right: 25px;
+}
+
+.dateFilter {
+  margin-right: 15px;
+  padding: 5px;
+}
+
+/* Student Table */
+
+.student-table {
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90%;
+  height: 100%;
+  max-width: 1200px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.student-table .Table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.student-table .Table.THead {
+  background-color: #f7f7f7;
+}
+
+.student-table .Table.Row {
+  border-bottom: 1px solid #ddd;
+  background-color: blue;
+}
+
+.student-table .Table.ColumnHeader {
+  padding: 12px 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+}
+
+.student-table .Table.Column {
+  padding: 12px 20px;
+  text-align: left;
+  color: #555;
+}
+
+.student-table .Table.TFoot {
+  background-color: #f7f7f7;
+  font-weight: bold;
+}
+
+.student-item {
+  padding: 10px 20px;
+}
+
+.student-item:last-child {
+  border-bottom: none;
 }

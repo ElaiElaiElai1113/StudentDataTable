@@ -1,6 +1,5 @@
 import React from "react";
 import Table from "../Table";
-import "/src/StudentTable.css";
 
 const StudentItem = ({ lastName, firstName, course, birthDate, age }) => {
   return (

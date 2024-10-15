@@ -1,6 +1,5 @@
 import React from "react";
 import Table from "./Table";
-import "/src/StudentTable.css";
 import StudentItem from "./students/StudentItem";
 
 const calculateAge = (birthDate) => {
@@ -14,14 +13,24 @@ const StudentTable = ({ students }) => {
 
   return (
     <div className="student-table">
-      <Table.TableContainer>
-        <Table.THead>
-          <Table.Row>
-            <Table.ColumnHeader colSpan="5">Last Name</Table.ColumnHeader>
-            <Table.ColumnHeader colSpan="5">First Name</Table.ColumnHeader>
-            <Table.ColumnHeader colSpan="5">Course</Table.ColumnHeader>
-            <Table.ColumnHeader colSpan="5">Birthdate</Table.ColumnHeader>
-            <Table.ColumnHeader colSpan="5">Age</Table.ColumnHeader>
+      <Table.TableContainer className="Table">
+        <Table.THead className="THead">
+          <Table.Row className="Row">
+            <Table.ColumnHeader className="ColumnHeader">
+              Last Name
+            </Table.ColumnHeader>
+            <Table.ColumnHeader className="ColumnHeader">
+              First Name
+            </Table.ColumnHeader>
+            <Table.ColumnHeader className="ColumnHeader">
+              Course
+            </Table.ColumnHeader>
+            <Table.ColumnHeader className="ColumnHeader">
+              Birthdate
+            </Table.ColumnHeader>
+            <Table.ColumnHeader className="ColumnHeader">
+              Age
+            </Table.ColumnHeader>
           </Table.Row>
         </Table.THead>
 
