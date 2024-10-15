@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import "./index.css";
 import FilterStudentTable from "./components/FilterStudentTable";
 import SearchBar from "./components/SearchBar";
 import StudentTable from "./components/StudentTable";
@@ -21,12 +22,29 @@ const students = [
     birthDate: "2003/10/18",
     occupation: 1,
   },
+
   {
     id: 3,
-    lastName: "Dabon",
-    firstName: "Lyla Alexys",
+    lastName: "Fernandez",
+    firstName: "Vince",
+    course: "IT",
+    birthDate: "2004/01/15",
+    occupation: 1,
+  },
+  {
+    id: 4,
+    lastName: "Gomez",
+    firstName: "Renz",
+    course: "DS",
+    birthDate: "2001/05/25",
+    occupation: 1,
+  },
+  {
+    id: 5,
+    lastName: "Urquia",
+    firstName: "Paulo",
     course: "CS",
-    birthDate: "2003/11/19",
+    birthDate: "2005/06/25",
     occupation: 1,
   },
 ];

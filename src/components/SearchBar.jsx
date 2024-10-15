@@ -3,8 +3,7 @@ import React, { useCallback } from "react";
 const SearchBar = ({
   query,
   setQuery,
-  ageQuery,
-  setAgeQuery,
+
   minDate,
   setMinDate,
   maxDate,
